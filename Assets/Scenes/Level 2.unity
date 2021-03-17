@@ -1570,7 +1570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989ff231f4b01644c9f5564cec2a20eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 50
   countText: {fileID: 1933973287}
   winTextObject: {fileID: 389440992}
 --- !u!114 &512345947
@@ -3238,7 +3238,7 @@ GameObject:
   - component: {fileID: 923762538}
   m_Layer: 0
   m_Name: Next level
-  m_TagString: Untagged
+  m_TagString: NieuweLevel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3255,7 +3255,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07b15055506acd94f91d202ba6f7eb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 3
 --- !u!65 &923762539
 BoxCollider:
   m_ObjectHideFlags: 0

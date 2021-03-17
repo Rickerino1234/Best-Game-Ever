@@ -1260,7 +1260,7 @@ GameObject:
   - component: {fileID: 923762538}
   m_Layer: 0
   m_Name: Next level
-  m_TagString: Untagged
+  m_TagString: NieuweLevel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
