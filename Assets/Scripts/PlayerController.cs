@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    Scene scene;
     public float speed = 0;
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
-    
+    bool isKlaar;
+    int[] AantalMunten = { 0, 0, 5, 6 };
     private Rigidbody rb;
     private int count;
     private float movementX;
@@ -17,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+ 
         rb = GetComponent<Rigidbody>();
         count = 0;
 
@@ -43,6 +47,12 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (isKlaar == true)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            isKlaar = false;
+            count = 0;
+        }
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
        
         rb.AddForce(movement * speed);
@@ -50,7 +60,19 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("PickUp"))
+        scene = SceneManager.GetActiveScene();
+        int BuildIndex = scene.buildIndex;
+        Debug.Log(AantalMunten[BuildIndex]);
+        if (count == AantalMunten[BuildIndex])
+        {
+            if(other.gameObject.CompareTag("NieuweLevel"))
+            {
+                isKlaar = true;
+            }
+        }
+
+
+        if (other.gameObject.CompareTag("PickUp"))
         {
             other.gameObject.SetActive(false);
             count = count + 1;

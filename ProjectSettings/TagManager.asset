@@ -7,6 +7,7 @@ TagManager:
   - PickUp
   - Enemy
   - Coin
+  - NieuweLevel
   layers:
   - Default
   - TransparentFX
