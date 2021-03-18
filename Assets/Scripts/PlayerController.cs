@@ -38,8 +38,11 @@ public class PlayerController : MonoBehaviour
 
     void SetCountText()
     {
+        scene = SceneManager.GetActiveScene();
+        int BuildIndex = scene.buildIndex;
+
         countText.text = "Coins: " + count.ToString();
-        if(count >= 1)
+        if(count == AantalMunten[BuildIndex])
         {
             winTextObject.SetActive(true);
         }
