@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
     bool isKlaar;
-    int[] AantalMunten = { 0, 0, 5, 6 };
+    int[] AantalMunten = { 0, 0, 5, 6, 8, 5 };
     private Rigidbody rb;
     private int count;
     private float movementX;
