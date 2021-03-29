@@ -121,7 +121,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2def9316574b7154cbc2352507a109c2,
         type: 3}
       propertyPath: m_Name
-      value: Super mario coin
+      value: Super mario coin Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2def9316574b7154cbc2352507a109c2,
         type: 3}
