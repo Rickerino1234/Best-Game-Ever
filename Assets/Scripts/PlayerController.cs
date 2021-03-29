@@ -50,6 +50,10 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (isKlaar == true && scene.buildIndex == 5)
+        {
+            SceneManager.LoadScene(0);
+        }
         if (isKlaar == true)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
