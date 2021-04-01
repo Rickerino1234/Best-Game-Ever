@@ -1797,7 +1797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.19
-  transformatie: {x: 0, y: 0, z: -15}
+  transformatie: {x: 0, y: 0, z: -11}
 --- !u!1 &512345940
 GameObject:
   m_ObjectHideFlags: 0
